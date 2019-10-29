@@ -1,0 +1,103 @@
+body {
+    background-image:url(bg.png);
+    font-family: sans-serif;
+    font-size: 23px ;
+    color: #be3c14;
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+
+img {
+    display: block;
+}
+
+header {
+    display: block;
+    margin: auto;
+}
+
+nav {
+    font-size: 12pt;
+    position: fixed;
+    padding: 5px;
+    margin: 0px;
+    right: 500px;
+    top: 0px;
+    background-color: black;
+    height: 50px;
+    border-radius: 0px 0px 10px 10px
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    top: 0px;
+
+}
+
+li, li a {
+    color: white;
+    float: left;
+    padding: 0px;
+   }
+
+   .rot {
+     color: #be3c14;  
+   }
+
+   .white {
+       color: white;
+   }
+
+   div.insta {
+       position: relative;
+       display: block;
+        top: -150px;
+        right: -360px;
+   }
+
+  .video-container-wrapper {
+    max-width: 100%;
+    width: 600px;
+    left: 0;
+    right:0;
+    margin:auto;
+    }
+
+    div {
+        display: block;
+
+    }
+
+    input {
+        background-color: grey;
+        width: 400px;
+        font-size: 14pt;
+        margin-top: 5px;
+        
+    }
+
+    ::placeholder {
+        color: white;
+        font-family: sans-serif;
+    }
+
+    textarea {
+        background-color: grey;
+        width: 400px;
+        display: block;
+        margin-top: 5px;
+        font-size: 14pt;
+    }
+
+    button {
+        margin-top: 20px;
+    }
+
+    .Bilder {
+        display: block;
+        margin-top: 10px;
+    }
+
+
