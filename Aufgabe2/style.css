@@ -100,4 +100,6 @@ li, li a {
         margin-top: 10px;
     }
 
-
+    li a:hover {
+        color: darkred;
+    }
