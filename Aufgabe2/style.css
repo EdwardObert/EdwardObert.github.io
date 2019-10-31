@@ -103,3 +103,8 @@ li, li a {
     li a:hover {
         color: darkred;
     }
+
+ .insta:hover {
+
+        opacity: 0.5;
+    }
