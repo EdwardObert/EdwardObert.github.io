@@ -1,0 +1,38 @@
+body {
+    color: white;
+    display: block;
+    background-image: url(hg.jpeg);
+   
+
+}
+
+nav {
+    position: absolute;
+    color: white;
+    list-style: none;
+    display: block;
+    top: 32%;
+    left: 20%;
+}
+
+nav li, a {
+   
+    font-size: 30pt;
+    color: white;
+    display: block;
+        list-style: none;
+        float: left;
+        margin-left: 20px;
+
+}
+
+ul {
+    
+    color: white;
+        list-style: none;
+        display: block;
+}
+
+li, a:hover {
+    color: red;
+}

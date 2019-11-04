@@ -1,0 +1,83 @@
+body {
+    display: block;
+    background-image: url(bg7.png);
+}
+
+#container {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    display: block;
+    position: fixed;
+    text-align: left;
+    color: white;
+    font-size: 23pt;
+    font-weight: bold;
+    top: 35%;
+    left: 8%;
+    
+}
+
+p {
+    display: block;
+    position: fixed;
+    text-align: left;
+    color: white;
+    font-size: 12pt;
+    left: 8%;
+    top: 55%;
+    
+
+}
+
+.busch {
+    display: block;
+    position: fixed;
+    top: -15%;
+    left: -11%;
+    
+}
+
+video {
+    display: block;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.pakete {
+    display: block;
+    position: absolute;
+    bottom: -5%;
+    right: -1%;
+
+}
+
+.stern1 {
+display: block;
+position: absolute;
+top: 25%;
+left: 20%;
+
+}
+
+.stern2 {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    
+    }
+
+    .stern3 {
+        display: block;
+        position: absolute;
+        top: 15%;
+        left: 60%;
+        
+        }

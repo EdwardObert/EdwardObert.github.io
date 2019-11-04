@@ -1,0 +1,52 @@
+body {
+    display: block;
+    background-image: url(bg1.png);
+}
+
+#wrapper {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    display: block;
+    position: fixed;
+    text-align: left;
+    color: white;
+    font-size: 23pt;
+    font-weight: bold;
+    top: 10%;
+    left: 10%;
+    
+}
+
+p {
+    display: block;
+    position: fixed;
+    text-align: left;
+    color: white;
+    font-size: 14pt;
+    left: 10%;
+    top: 55%;
+    
+
+}
+
+.busch {
+    display: block;
+    position: fixed;
+    top: -15%;
+    left: -11%;
+    
+}
+
+.pinguin {
+    display: block;
+    position: fixed;
+    top: 55%;
+    left: 80%;
+    
+}
