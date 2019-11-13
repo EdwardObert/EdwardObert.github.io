@@ -1,7 +1,6 @@
 @media only screen and (max-width:550px) {
 
 body {
-    width: 100%;
     background-image: url(bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,6 +22,7 @@ h1 {
 }
 
 p {
+    width: 375px;
     left: -2%;
     font-size: 16pt;
     text-align: center;
@@ -41,7 +41,7 @@ p {
     bottom: 20%;
     left: 37%;
     background-color: darkblue;
-    padding: 20px;
+    padding: 40px;
 }
 
 .Knopf1:hover {
@@ -50,7 +50,12 @@ p {
 }
 
 a {
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    font-size: 18pt;
     color: white;
+    font-weight: bold;
 }
 
 a:hover {
