@@ -1,4 +1,4 @@
-@media only screen and (max-width:516px) {
+@media only screen and (max-width:375px) {
 
 body {
     width: 100%;
@@ -16,9 +16,9 @@ body {
 
 h1 {
     position: absolute;
-    top: 3%;
+    top: 1.5%;
     font-size: 20pt;
-    left: 28%;
+    left: 20%;
     color: white;
 }
 
