@@ -1,6 +1,7 @@
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:480px) {
 
 body {
+    width: 100%;
     background-image: url(bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,9 +16,9 @@ body {
 
 h1 {
     position: absolute;
-    top: 4%;
+    top: 2.5%;
     font-size: 20pt;
-    left: 30%;
+    left: 27%;
     color: white;
 }
 
