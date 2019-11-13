@@ -1,0 +1,194 @@
+@media only screen and (max-width:500px) {
+
+body {
+    margin: auto;
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18pt;
+} 
+
+.Frage1, img[alt=Frage1] {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+
+p {
+    position: absolute;
+    color: white;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    top: 12%;
+    left: 19%;
+}
+
+.Antworten, img[alt=A1] {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+
+}
+
+.a1 {
+    font-weight: normal;
+    font-size: 11pt;
+    display: inline;
+    position: absolute;
+    text-align: center;
+    left: 45%;
+    top: 38.8%; }
+
+    img[alt=A2] {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50%;}
+
+
+.a2 {
+    font-weight: normal;
+    font-size: 11pt;
+    display: inline;
+    position: absolute;
+    text-align: center;
+    left: 45%;
+    top: 49%; }
+
+    img[alt=A3] {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 60%;}
+
+
+.a3 {
+    font-weight: normal;
+    font-size: 11pt;
+    display: inline;
+    position: absolute;
+    text-align: center;
+    left: 45%;
+    top: 58.8%; }
+
+    img[alt=A4] {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70%;}
+
+
+        .a4 {
+            font-weight: normal;
+            font-size: 11pt;
+            display: inline;
+            position: absolute;
+            text-align: center;
+            left: 45%;
+            top: 68.8%; }
+
+
+    .Joker {
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        left: 30%;
+    }
+
+   #andword2:hover {
+       width: 100%;
+       content: url(answer_over.png);
+   }
+
+   #andword3:hover {
+    width: 100%;
+    content: url(answer_over.png);
+}
+
+#andword4:hover {
+    width: 100%;
+    content: url(answer_over.png);
+}
+
+#andword1:hover {
+    width: 100%;
+    content: url(answer_over.png);
+}
+
+.congrats {
+    color: red;
+text-align: center;
+position: absolute;
+font-size: 23pt;
+margin: auto;
+top: 65%;
+left: 18%;} 
+
+
+.again {
+color: red;
+text-align: center;
+position: absolute;
+font-size: 23pt;
+margin: auto;
+top: 75%;
+left: 25%;
+}
+
+
+a {
+
+    color: red;
+}
+
+a:hover {
+
+    color: gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
