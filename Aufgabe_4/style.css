@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-} }
+} 
 
 .Frage1 {
     position: absolute;
@@ -15,9 +15,9 @@ body {
 
 h1 {
     position: absolute;
-    top: 2.5%;
+    top: 4%;
     font-size: 20pt;
-    left: 22%;
+    left: 30%;
     color: white;
 }
 
@@ -38,7 +38,7 @@ p {
     font-weight: bold;
     text-align: center;
     bottom: 20%;
-    left: 35%;
+    left: 40%;
     background-color: darkblue;
     padding: 20px;
 }
