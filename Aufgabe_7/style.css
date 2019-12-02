@@ -1,0 +1,183 @@
+body {
+    display: inline;
+    background-color: #0D0D0D;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#Buttons {
+    display: block;
+    position: absolute;
+    left: 36%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+        }
+
+#b1 {
+    left: 10px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #21A2BF;
+}
+
+#b2 {
+    left: 165px;
+    top: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+
+    border-radius: 5px;
+    background-color: #21A2BF;
+}
+
+#b3 {
+    left: 320px;
+    top: 0px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #21A2BF;
+}
+
+#b1:hover {
+   opacity: 0.8;
+}
+
+#b2:hover {
+    opacity: 0.8;
+ }
+
+ #b3:hover {
+    opacity: 0.8;
+ }
+
+ #b4:hover {
+    opacity: 0.8;
+ }
+
+
+ #b5:hover {
+    opacity: 0.8;
+ }
+
+
+ #b6:hover {
+    opacity: 0.8;
+ }
+
+
+ #b7:hover {
+    opacity: 0.8;
+ }
+
+
+ #b8:hover {
+    opacity: 0.8;
+ }
+
+
+
+ #b9:hover {
+    opacity: 0.8;
+ }
+
+ #b10:hover {
+    opacity: 0.8;
+ }
+
+#b4 {
+    left: 10px;
+    top: 155px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #F20746;
+}
+
+#b5 {
+    left: 165px;
+    top: 155px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #F20746;
+}
+
+#b6 {
+    left: 320px;
+    top: 155px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #F20746;
+}
+
+#b7 {
+    left: 10px;
+    top: 310px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color:  #F20746;
+}
+
+#b8 {
+    left: 165px;
+    top: 310px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #F28A2E;
+}
+
+#b9 {
+    left: 320px;
+    top: 310px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color:#F28A2E;
+}
+
+#b10 {
+    left: 165px;
+    top: 465px;
+    position: absolute;
+    font-weight: bold;
+    color: #F1F4FE;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #AB05F2;
+}
+
+#play {
+
+    position: absolute;
+    top: 465px
+}
+
+#play:hover {
+    opacity: 0.8;
+}
+
+#play2 {
+
+    left:  340px;
+    position: absolute;
+    top: 465px
+}
+
+#play2:hover {
+    opacity: 0.8;
+}
