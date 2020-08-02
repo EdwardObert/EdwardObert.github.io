@@ -2,14 +2,10 @@ namespace Picture {
 
     window.addEventListener("load", handelLoad);
     export let crc2: CanvasRenderingContext2D;
-    export let figures: Figure[] = [];
-    let savedPictures: PictureSave[] = [];
+    let figures: Figure [] = [];
     let figure: string;
-    let list: string = "";
 
     let canvasTarget: HTMLCanvasElement;
-
-    let listPlace: HTMLDivElement;
 
     let circle: HTMLDivElement;
     let circlein: HTMLElement;
@@ -33,65 +29,58 @@ namespace Picture {
     let save: HTMLButtonElement;
     let restore: HTMLButtonElement;
 
-    let url: string = "http://localhost:5002";
-
-    async function handelLoad(_event: Event): Promise<void> {
-
+    function handelLoad (_event: Event): void {
         //get context
         let canvas: HTMLCanvasElement | null = document.querySelector("canvas");
         if (!canvas)
             return;
         crc2 = <CanvasRenderingContext2D>canvas.getContext("2d");
-        canvasTarget = <HTMLCanvasElement>document.querySelector("canvas");
+        canvasTarget = <HTMLCanvasElement> document.querySelector("canvas");
 
-        listPlace = <HTMLDivElement>document.querySelector("#pictures");
+        circle = <HTMLDivElement> document.querySelector("#circle");
+        circlein = <HTMLElement> document.querySelector("#c");
 
-        circle = <HTMLDivElement>document.querySelector("#circle");
-        circlein = <HTMLElement>document.querySelector("#c");
+        triangle = <HTMLDivElement> document.querySelector("#triangle");
+        trianglein = <HTMLElement> document.querySelector("#t");
 
-        triangle = <HTMLDivElement>document.querySelector("#triangle");
-        trianglein = <HTMLElement>document.querySelector("#t");
+        square = <HTMLDivElement> document.querySelector("#square");
+        squarein = <HTMLElement> document.querySelector("#s");
 
-        square = <HTMLDivElement>document.querySelector("#square");
-        squarein = <HTMLElement>document.querySelector("#s");
+        v = <HTMLSelectElement> document.querySelector("#velocity");
+        r = <HTMLSelectElement> document.querySelector("#rotation");
+        c = <HTMLSelectElement> document.querySelector("#color");
+        s = <HTMLSelectElement> document.querySelector("#figuresize");
 
-        v = <HTMLSelectElement>document.querySelector("#velocity");
-        r = <HTMLSelectElement>document.querySelector("#rotation");
-        c = <HTMLSelectElement>document.querySelector("#color");
-        s = <HTMLSelectElement>document.querySelector("#figuresize");
+        sizex = <HTMLInputElement> document.querySelector("#sizex");
+        sizey = <HTMLInputElement> document.querySelector("#sizey");
+        bg = <HTMLSelectElement> document.querySelector("#backgroundc");
 
-        sizex = <HTMLInputElement>document.querySelector("#sizex");
-        sizey = <HTMLInputElement>document.querySelector("#sizey");
-        bg = <HTMLSelectElement>document.querySelector("#backgroundc");
-
-        save = <HTMLButtonElement>document.querySelector("#save");
-        restore = <HTMLButtonElement>document.querySelector("#restore");
+        save = <HTMLButtonElement> document.querySelector("#save");
+        restore = <HTMLButtonElement> document.querySelector("#restore");
 
         //add Listeners
-        circle.addEventListener("click", selectCricle);
-        triangle.addEventListener("click", selectTriangle);
-        square.addEventListener("click", selectSquare);
+        circle?.addEventListener("click", selectCricle);
+        triangle?.addEventListener("click", selectTriangle);
+        square?.addEventListener("click", selectSquare);
 
-        c.addEventListener("change", changeColor);
+        c?.addEventListener("change", changeColor);
 
-        sizex.addEventListener("change", adjustCanvas);
-        sizey.addEventListener("change", adjustCanvas);
+        sizex?.addEventListener("change", adjustCanvas);
+        sizey?.addEventListener("change", adjustCanvas);
 
-        canvasTarget.addEventListener("click", createFigure);
-        save.addEventListener("click", savePicture);
-        restore.addEventListener("click", restoerPicture);
+        canvasTarget?.addEventListener("click", createFigure);
+        //save?.addEventListener("click", savePicture);
+        //restore?.addEventListener("click", restoerPicture);
 
         window.setInterval(update, 20);
 
     }
 
-
-
     function update(): void {
         drawBackground();
         for (let figure of figures) {
             figure.rotate();
-            figure.move(1);
+            figure.move(1 / 50);
             figure.draw();
         }
     }
@@ -104,7 +93,7 @@ namespace Picture {
         //console.log(background);
     }
 
-    function selectCricle(): void {
+    function selectCricle (): void {
         let color: string = c?.value;
         figure = "circle";
 
@@ -118,7 +107,7 @@ namespace Picture {
         squarein?.setAttribute("style", "color: black");
     }
 
-    function selectTriangle(): void {
+    function selectTriangle (): void {
         let color: string = c?.value;
         figure = "triangle";
 
@@ -132,7 +121,7 @@ namespace Picture {
         squarein?.setAttribute("style", "color: black");
     }
 
-    function selectSquare(): void {
+    function selectSquare (): void {
         let color: string = c?.value;
         figure = "square";
 
@@ -151,12 +140,12 @@ namespace Picture {
 
         if (figure == "circle")
             circlein?.setAttribute("style", "color: " + color);
-        else if (figure == "triangle")
-            trianglein?.setAttribute("style", "color: " + color);
-        else if (figure == "square")
-            squarein?.setAttribute("style", "color: " + color);
-        else
-            console.log("no figure selectetd");
+            else if (figure == "triangle")
+                trianglein?.setAttribute("style", "color: " + color);
+                else if (figure == "square")
+                    squarein?.setAttribute("style", "color: " + color);
+                        else
+                            console.log("no figure selectetd");
     }
 
     function adjustCanvas(): void {
@@ -178,95 +167,16 @@ namespace Picture {
         if (figure == "circle") {
             let circle: Figure = new Circle(position, velocity, rotation, color, size);
             figures.push(circle);
-        }
-        else if (figure == "triangle") {
-            let trinangle: Figure = new Triangle(position, velocity, rotation, color, size);
-            figures.push(trinangle);
-        }
-        else if (figure == "square") {
-            let square: Figure = new Square(position, velocity, rotation, color, size);
-            figures.push(square);
-        }
-        else
-            console.log("no figure selected");
-    }
-
-    async function savePicture(_event: Event): Promise<void> {
-
-        //Daten vorbereiten
-        let date: Date | string = new Date();
-        let hh: string = String(date.getHours()).padStart(2, "0");
-        let mimi: string = String(date.getMinutes()).padStart(2, "0");
-        let dd: string = String(date.getDate()).padStart(2, "0");
-        let mm: string = String(date.getMonth() + 1).padStart(2, "0");
-        let yyyy: string = String(date.getFullYear());
-        date = hh + ":" + mimi + "; " + dd + "/" + mm + "/" + yyyy;
-        //console.log(date);
-
-        let x: number = Number(sizex.value);
-        if (x == 0)
-            x = 580;
-        let y: number = Number(sizey.value);
-        if (y == 0)
-            y = 400;
-        background = bg.value;
-
-        let infos: PictureSave = new PictureSave(date, figures, x, y, background);
-
-
-        //Daten an Server schicken
-        console.log("Send Picture");
-        let pictures: string = JSON.stringify(infos);
-        let query: URLSearchParams = new URLSearchParams(pictures);
-        let response: Response = await fetch(url + "?" + query.toString());
-        let responseText: string = await response.text();
-        alert(responseText);
-        
-        list = "";
-
-    }
-
-    async function restoerPicture(_event: Event): Promise<void> {
-        if (list == "") {
-            //Anfrage senden
-            savedPictures.splice(0, savedPictures.length);
-            console.log("sending");
-            let response: Response = await fetch(url + "?get");
-
-            let responseText: string = await response.text();
-            responseText.slice(2, 40);
-            let pictureData: PictureSave = JSON.parse(responseText);
-            alert(pictureData);
-            savedPictures.push(pictureData);
-            console.log(savedPictures);
-            createList();
-            list = "loaded";
-
-        }
-    }
-
-    function createList(): void {
-        listPlace.innerHTML = "";
-        for (let index: number = 0; index < savedPictures.length; index++) {
-            let picture: HTMLParagraphElement = document.createElement("p");
-            picture.setAttribute("id", "" + savedPictures[index].date);
-            picture.addEventListener("click", loadPicture);
-            picture.innerHTML = "abc" + savedPictures[index].date;
-            listPlace.appendChild(picture);
-        }
-    }
-
-    function loadPicture(_event: Event): void {
-        console.log("loading picture");
-        for (let index: number = 0; index < savedPictures.length; index++) {
-            let id: string = (_event.target as Element).id;
-            if (id == savedPictures[index].bg) {
-                for (let index: number = 0; index < savedPictures.length; index++) {
-                    figures.push(savedPictures[index].figure[index]);
-                }
             }
-        }
+            else if (figure == "triangle") {
+                let trinangle: Figure = new Triangle(position, velocity, rotation, color, size);
+                figures.push(trinangle);
+                }
+                else if (figure == "square") {
+                    let square: Figure = new Square(position, velocity, rotation, color, size);
+                    figures.push(square);
+                    }
+                    else
+                        console.log("no figure selected");
     }
-
-
 }

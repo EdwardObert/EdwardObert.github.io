@@ -8,8 +8,6 @@ var Picture;
             this.size = _size;
         }
         draw() {
-            if (this.rotation == 0)
-                Picture.crc2.translate(this.position.x, this.position.y);
             Picture.crc2.beginPath();
             Picture.crc2.moveTo(-25 * this.size, -25 * this.size);
             Picture.crc2.lineTo(-25 * this.size, 25 * this.size);

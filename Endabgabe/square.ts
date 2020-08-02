@@ -10,8 +10,6 @@ namespace Picture {
         }
 
         draw(): void {
-            if (this.rotation == 0)
-                crc2.translate(this.position.x, this.position.y);
             crc2.beginPath();
             crc2.moveTo(-25 * this.size, -25 * this.size);
             crc2.lineTo(-25 * this.size, 25 * this.size);

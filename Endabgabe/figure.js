@@ -6,13 +6,13 @@ var Picture;
             this.position = _position;
             this.rotation = _rotation;
             this.velocity = new Picture.Vector(0, 0);
-            this.factor = this.rotation;
+            this.factor = this.rotation / 10;
             if (_parameter == 1)
-                this.velocity.random(1, 1);
+                this.velocity.random(0, 35);
             else if (_parameter == 2)
-                this.velocity.random(2, 2);
+                this.velocity.random(40, 75);
             else if (_parameter)
-                this.velocity.random(3, 3);
+                this.velocity.random(80, 115);
             else
                 console.log("no velocity");
         }
@@ -34,19 +34,15 @@ var Picture;
                 //crc2.resetTransform();
                 Picture.crc2.translate(this.position.x, this.position.y);
                 //console.log(this.position);
-                if (this.factor / 100 == 2 + Number((this.rotation / 100).toFixed(2)))
-                    this.factor = this.rotation;
-                //crc2.rotate(Math.PI * this.factor);
-                if (this.rotation == 1) {
-                    this.factor += 1;
-                }
-                else if (this.rotation == 2) {
-                    this.factor += 2;
-                }
-                else if (this.rotation == 4) {
-                    this.factor += 4;
-                }
-                Picture.crc2.rotate(Math.PI * this.factor / 100);
+                if (this.factor == 2)
+                    this.factor = this.rotation / 10;
+                Picture.crc2.rotate(Math.PI * this.factor);
+                if (this.rotation == 1)
+                    this.factor += 0.01;
+                else if (this.rotation == 2)
+                    this.factor += 0.02;
+                else if (this.rotation == 4)
+                    this.factor += 0.04;
             }
         }
         draw() {
